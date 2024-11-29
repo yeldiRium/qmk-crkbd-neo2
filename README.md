@@ -3,15 +3,13 @@
 **DISCLAIMER**: Work in progress. Untested. Just for planning.
 
 ## Layers
-This is a Neo 2.0 layout adjusted for a smaller (3x6) keyboard. It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever. The keymap is laid out expecting gnu/linux using the german QWERTZ layout (but is also tested and actively used on MacOS).
+This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard. It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever. The keymap is laid out expecting gnu/linux using the german QWERTZ layout (but is also intended for use with macOS).
 
-[Layer 1](#layer-1) Lowercase, upppercase and typographical characters
-
-[Layer 2](#layer-2) Special characters for programming
-
-[Layer 3](#layer-3) WASD-like movement keys and number block
-
-[Layer 4](#layer-4) Function keys
+- [Layer 1](#layer-1) Lowercase, upppercase and typographical characters
+- [Layer 2](#layer-2) Special characters for programming
+- [Layer 3](#layer-3) WASD-like movement keys and number block
+- [Layer 4](#layer-4) Function keys
+- [Layer 5](#layer-5) Cursor movement and RGB matrix control
 
 ## Legend
 
@@ -85,7 +83,7 @@ This layer implements function and multimedia keys. Access it by pressing the NE
 
 ## Layer 5
 
-This layer implements meta stuff like pointer and RGB matrix control. Access it by pressing the META key.
+This layer implements meta stuff like pointer and RGB matrix control. Access it by pressing the NAV key.
 
 ```
 ,-----------------------------------------.          ,-----------------------------------------.
