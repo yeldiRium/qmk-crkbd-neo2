@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LAYER_FKEYS                  3
 #define LAYER_NAV                    4
 
-// Custom keycodes
+// Custom key mappings
 #define N2_NEO3                      MO(LAYER_NEO_3)
 #define N2_NEO4                      MO(LAYER_NEO_4)
 #define N2_NAV                       MO(LAYER_NAV)
@@ -35,20 +35,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define N2_IEXC                      RSA(DE_1)                   // ¡
 #define N2_IQUE                      RSA(DE_SS)                  // ¿
 
-// Keys that need yet to be programmed.
-#define TBD KC_NO
-#define TBD_SS                       TBD  // Needs to be ß and ẞ
-#define TBD_COMM                     TBD  // Needs to be , and –
-#define TBD_DOT                      TBD  // Needs to be . and ·
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAYER_NEO_1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_NO,    DE_X,    DE_V,    DE_L,    DE_C,    DE_W,                         DE_K,    DE_H,    DE_G,    DE_F,   DE_Q,   TBD_SS,
+        KC_NO,    DE_X,    DE_V,    DE_L,    DE_C,    DE_W,                         DE_K,    DE_H,    DE_G,    DE_F,   DE_Q,    DE_SS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       N2_NEO3,    DE_U,    DE_I,    DE_A,    DE_E,    DE_O,                         DE_S,    DE_N,    DE_R,    DE_T,    DE_D,    DE_Y,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, DE_UDIA, DE_ODIA, DE_ADIA,    DE_P,    DE_Z,                         DE_B,    DE_M,TBD_COMM, TBD_DOT,    DE_J, KC_RSFT,
+      KC_LSFT, DE_UDIA, DE_ODIA, DE_ADIA,    DE_P,    DE_Z,                         DE_B,    DE_M, DE_COMM,  DE_DOT,    DE_J, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, KC_LALT, KC_LCTL,     KC_SPC, N2_NEO4,  N2_NAV
                                       //`--------------------------'  `--------------------------'
@@ -108,3 +102,16 @@ void keyboard_post_init_user(void) {
   rgb_matrix_mode_noeeprom(RGB_MATRIX_BREATHING);
   rgb_matrix_sethsv_noeeprom(22, 255, 120);
 }
+
+// Send – on Shift + ,
+const key_override_t em_dash_override = ko_make_basic(MOD_MASK_SHIFT, DE_COMM, RALT(KC_SLSH));
+// Send · on Shift + .
+const key_override_t middle_dot_override = ko_make_basic(MOD_MASK_SHIFT, DE_DOT, RALT(KC_COMM));
+// Send ẞ on Shift + ß
+const key_override_t capital_ss_override = ko_make_basic(MOD_MASK_SHIFT, DE_SS, LSFT(RALT(KC_S)));
+
+const key_override_t *key_overrides[] = {
+  &em_dash_override,
+  &middle_dot_override,
+  &capital_ss_override
+};
