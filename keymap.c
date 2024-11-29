@@ -88,9 +88,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______,   KC_NO
                                       //`--------------------------'  `--------------------------'
-  )
+  ),
 
-    [LAYER_META] = LAYOUT_split_3x6_3(
+    [LAYER_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       RM_TOGG,   KC_NO,   MS_UP,   KC_NO,   KC_NO,   KC_NO,                        KC_NO,   KC_NO, MS_WHLU,   KC_NO,  KC_NO,    KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -106,5 +106,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void keyboard_post_init_user(void) {
   rgb_matrix_enable_noeeprom();
   rgb_matrix_mode_noeeprom(RGB_MATRIX_BREATHING);
-  rgb_matrix_sethsvnoeeprom(22, 255, 255);
+  rgb_matrix_sethsv_noeeprom(22, 255, 120);
 }
