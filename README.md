@@ -1,4 +1,4 @@
-# NEO2 for <insert keyboard here> on QWERTZ
+# NEO2 for Crkbd on QWERTZ
 
 **DISCLAIMER**: Work in progress. Untested. Just for planning.
 
