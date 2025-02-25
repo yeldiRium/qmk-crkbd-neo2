@@ -20,23 +20,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "keymap_german.h"
 
-// Layer Names
-#define LAYER_NEO_1                  0
-#define LAYER_NEO_3                  1
-#define LAYER_NEO_4                  2
-#define LAYER_FKEYS                  3
-#define LAYER_NAV                    4
+enum layers {
+  _NEO_1,
+  _NEO_3,
+  _NEO_4,
+  _FKEYS,
+  _NAV
+};
 
 // Custom key mappings
-#define N2_NEO3                      MO(LAYER_NEO_3)
-#define N2_NEO4                      MO(LAYER_NEO_4)
-#define N2_NAV                       MO(LAYER_NAV)
+#define N2_NEO3                      MO(_NEO_3)
+#define N2_NEO4                      MO(_NEO_4)
+#define N2_NAV                       MO(_NAV)
 #define N2_ELL                       RALT(DE_DOT)                // …
 #define N2_IEXC                      RSA(DE_1)                   // ¡
 #define N2_IQUE                      RSA(DE_SS)                  // ¿
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [LAYER_NEO_1] = LAYOUT_split_3x6_3(
+    [_NEO_1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_NO,    DE_X,    DE_V,    DE_L,    DE_C,    DE_W,                         DE_K,    DE_H,    DE_G,    DE_F,   DE_Q,    DE_SS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -48,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
-    [LAYER_NEO_3] = LAYOUT_split_3x6_3(
+    [_NEO_3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_NO,  N2_ELL, DE_UNDS, DE_LBRC, DE_RBRC, DE_CIRC,                      DE_EXLM, DE_LABK, DE_RABK,  DE_EQL, DE_AMPR, DE_EURO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -60,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
-    [LAYER_NEO_4] = LAYOUT_split_3x6_3(
+    [_NEO_4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_NO, KC_PGUP, KC_BSPC,   KC_UP,  KC_DEL, KC_PGDN,                      N2_IEXC,    DE_7,    DE_8,    DE_9,   KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -72,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
-    [LAYER_FKEYS] = LAYOUT_split_3x6_3(
+    [_FKEYS] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_NO, KC_MPRV, KC_MPLY, KC_MNXT,   KC_NO,   KC_NO,                        KC_NO,   KC_F7,   KC_F8,   KC_F9,  KC_F10,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -84,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
-    [LAYER_NAV] = LAYOUT_split_3x6_3(
+    [_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       RM_TOGG,   KC_NO,   KC_NO,   MS_UP,   KC_NO,   KC_NO,                        KC_NO,   KC_NO, MS_WHLU,   KC_NO,  KC_NO,    KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -104,7 +105,7 @@ void keyboard_post_init_user(void) {
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-  return update_tri_layer_state(state, LAYER_NEO_3, LAYER_NEO_4, LAYER_FKEYS);
+  return update_tri_layer_state(state, _NEO_3, _NEO_4, _FKEYS);
 }
 
 // Send – on Shift + ,
