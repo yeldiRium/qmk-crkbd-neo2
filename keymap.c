@@ -103,6 +103,10 @@ void keyboard_post_init_user(void) {
   rgb_matrix_sethsv_noeeprom(22, 255, 120);
 }
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+  return update_tri_layer_state(state, LAYER_NEO_3, LAYER_NEO_4, LAYER_FKEYS);
+}
+
 // Send – on Shift + ,
 const key_override_t em_dash_override = ko_make_basic(MOD_MASK_SHIFT, DE_COMM, RALT(KC_SLSH));
 // Send · on Shift + .
