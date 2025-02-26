@@ -98,12 +98,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-void keyboard_post_init_user(void) {
-  rgb_matrix_enable_noeeprom();
-  rgb_matrix_mode_noeeprom(RGB_MATRIX_BREATHING);
-  rgb_matrix_sethsv_noeeprom(22, 255, 120);
-}
-
 layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _NEO_3, _NEO_4, _FKEYS);
 }
