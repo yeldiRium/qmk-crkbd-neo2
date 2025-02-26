@@ -87,13 +87,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_NAV] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      RM_TOGG,   KC_NO,   KC_NO,   MS_UP,   KC_NO,   KC_NO,                        KC_NO,   KC_NO, MS_WHLU,   KC_NO,  KC_NO,    KC_NO,
+      RM_TOGG,   KC_NO,   KC_NO,   MS_UP,   KC_NO,   KC_NO,                        KC_NO, MS_BTN1, MS_WHLU, MS_BTN2,  KC_NO,    KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
         KC_NO,   KC_NO, MS_LEFT, MS_DOWN, MS_RGHT,   KC_NO,                        KC_NO, MS_WHLL, MS_WHLD, MS_WHLR,  KC_NO,    KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
         KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                        KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,    KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           KC_APP, MS_BTN1, MS_BTN2,      KC_NO,   KC_NO,  N2_NAV
+                                           KC_APP, _______, _______,      KC_NO,   KC_NO,  N2_NAV
                                       //`--------------------------'  `--------------------------'
   )
 };
