@@ -1,6 +1,6 @@
 # NEO2 for Crkbd on QWERTZ
 
-**DISCLAIMER**: Work in progress. Untested. Just for planning.
+Currently not working for MacOS. WIP.
 
 ## Layers
 This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the [Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever. The keymap is laid out expecting gnu/linux using the german QWERTZ layout (but is also intended for use with macOS).
