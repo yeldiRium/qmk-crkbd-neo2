@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
-#include "keymap_german.h"
+#include "keymap_german_mac_iso.h"
 
 enum layers {
   _NEO_1,
@@ -43,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       N2_NEO3,    DE_U,    DE_I,    DE_A,    DE_E,    DE_O,                         DE_S,    DE_N,    DE_R,    DE_T,    DE_D,    DE_Y,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, DE_UDIA, DE_ODIA, DE_ADIA,    DE_P,    DE_Z,                         DE_B,    DE_M, DE_COMM,  DE_DOT,    DE_J, KC_RSFT,
+      KC_LSFT, DE_UDIA, DE_ODIA, DE_ADIA,    DE_P,    DE_Z,                         DE_B,    DE_M, DE_COMM,  DE_DOT,    DE_J, KC_LALT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, KC_LALT, KC_LCTL,     KC_SPC, N2_NEO4,  N2_NAV
+                                          KC_RGUI, KC_LGUI, KC_LCTL,     KC_SPC, N2_NEO4,  N2_NAV
                                       //`--------------------------'  `--------------------------'
   ),
 

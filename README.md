@@ -1,9 +1,11 @@
 # NEO2 for Crkbd on QWERTZ
 
-Currently not working for MacOS. WIP.
+This repo contains two layouts. The [de layout](./de) is compatible with computers that suppor the standard de qwertz layout. The [de-macos](./de-macos) layout is for the macos nonstandard (and honestly kind of bullshit) qwertz layout. But since I'm forced to use Citrix with remote Windows machines and because Citrix' key mapping is even worse than MacOS by itself, the de-macos layout has some weird key placements to make using citrix the priority.
+
+To use this layout, flash your left keyboard half with the de layout and the right half with the de-macos layout. You can then switch between the two by pluggin the cable in the side you want to use.
 
 ## Layers
-This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the [Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever. The keymap is laid out expecting gnu/linux using the german QWERTZ layout (but is also intended for use with macOS).
+This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the [Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever.
 
 - [Layer 1](#layer-1) Lowercase, upppercase and typographical characters
 - [Layer 2](#layer-2) Special characters for programming
@@ -30,6 +32,20 @@ This layer implements NEO layers 1 and 2 (using Shift).
 | LSFT | ü/Ü  | ö/Ö  | ä/Ä  | p/P  | z/Z  |          | b/B  | m/M  | ,/–  | ./·  | j/J  | RSFT |
 `------+------+------+--+---+--+---+--+---+--.    ,--+---+--+---+--+---+--+------+------+------'
                         | LGUI | LALT | LCTL |    | SPC  | NEO4 | NAV  |
+                        `--------------------'    `--------------------'
+```
+
+This layer differs slightly on MacOS to improve Citrix usage. Since Citrix uses LGUI to send LALT and RGUI to send LGUI (I hate this), we put them in their respective places. But since then there's no Option key for the use on the host MacOS, we put LALT where I usuall have RSFT, which I barely use anyway.
+
+```
+,-----------------------------------------.          ,----------------------------------------.
+| ---  | x/X  | v/V  | l/L  | c/C  | w/W  |          | k/K  | h/H  | g/G  | f/F  | q/Q  | ß/ẞ  |
+|------+------+------+------+------+------|          |------+------+------+------+------+------|
+| NEO3 | u/U  | i/I  | a/A  | e/E  | o/O  |          | s/S  | n/N  | r/R  | t/T  | d/D  | y/Y  |
+|------+------+------+------+------+------|          |------+------+------+------+------+------|
+| LSFT | ü/Ü  | ö/Ö  | ä/Ä  | p/P  | z/Z  |          | b/B  | m/M  | ,/–  | ./·  | j/J  | LALT |
+`------+------+------+--+---+--+---+--+---+--.    ,--+---+--+---+--+---+--+------+------+------'
+                        | RGUI | LGUI | LCTL |    | SPC  | NEO4 | NAV  |
                         `--------------------'    `--------------------'
 ```
 
