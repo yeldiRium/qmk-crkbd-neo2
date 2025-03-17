@@ -1,17 +1,29 @@
 # NEO2 for Crkbd on QWERTZ
 
-This repo contains two layouts. The [de layout](./de) is compatible with computers that suppor the standard de qwertz layout. The [de-macos](./de-macos) layout is for the macos nonstandard (and honestly kind of bullshit) qwertz layout. But since I'm forced to use Citrix with remote Windows machines and because Citrix' key mapping is even worse than MacOS by itself, the de-macos layout has some weird key placements to make using citrix the priority.
+This repo contains two layouts. The [de layout](./de) is compatible with
+computers that support the standard de qwertz layout. The [de-macos](./de-macos)
+layout is for the macos nonstandard qwertz layout.
 
-To use this layout, flash your left keyboard half with the de layout and the right half with the de-macos layout. You can then switch between the two by pluggin the cable in the side you want to use.
+Since I'm forced to use Citrix with remote Windows machines and because Citrix'
+key mapping is even worse than MacOS by itself, the de-macos layout has some
+weird key placements to make using citrix the priority.
+
+To use this layout, flash your left keyboard half with the de layout and the
+right half with the de-macos layout. You can then switch between the two by
+plugging the cable in the side you want to use.
 
 ## Layers
-This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the [Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal optimization and I will not take requests. If you like it, feel free to use it, tweak it, whatever.
+
+This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the
+[Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal
+optimization and I will not take requests. If you like it, feel free to use it,
+tweak it, whatever.
 
 - [Layer 1](#layer-1) Lowercase, upppercase and typographical characters
 - [Layer 2](#layer-2) Special characters for programming
 - [Layer 3](#layer-3) WASD-like movement keys and number block
 - [Layer 4](#layer-4) Function keys
-- [Layer 5](#layer-5) Cursor movement and RGB matrix control
+- [Layer 5](#layer-5) Cursor movement
 
 ## Legend
 
@@ -35,7 +47,11 @@ This layer implements NEO layers 1 and 2 (using Shift).
                         `--------------------'    `--------------------'
 ```
 
-This layer differs slightly on MacOS to improve Citrix usage. Since Citrix uses LGUI to send LALT and RGUI to send LGUI (I hate this), we put them in their respective places. But since then there's no Option key for the use on the host MacOS, we put LALT where I usuall have RSFT, which I barely use anyway.
+This layer differs slightly on MacOS to improve Citrix usage. Since Citrix uses
+LGUI to send LALT and RGUI to send LGUI (I hate this), I put them in their
+respective places. But since then there's no Option key for the use on the host
+MacOS, I put LALT where I usuall have RSFT, which I barely use anyway.
+This makes using MacOS slightly annoying, but Citrix feels like normal Windows.
 
 ```
 ,-----------------------------------------.          ,----------------------------------------.
@@ -99,11 +115,11 @@ This layer implements function and multimedia keys. Access it by pressing the NE
 
 ## Layer 5
 
-This layer implements meta stuff like pointer and RGB matrix control. Access it by pressing the NAV key.
+This layer implements meta stuff like pointer and mouse wheel control. Access it by pressing the NAV key.
 
 ```
 ,-----------------------------------------.          ,-----------------------------------------.
-| TOGG | ---  | ---  | Mu   | ---  | ---  |          | ---  | LClk | MWu  | RClk | ---  | ---  |
+| ---  | ---  | ---  | Mu   | ---  | ---  |          | ---  | LClk | MWu  | RClk | ---  | ---  |
 |------+------+ -----+------+------+------|          |------+------+------+------+------+------|
 | ---  | ---  | Ml   | Md   | Mr   | ---  |          | ---  | MWl  | MWd  | MWr  | ---  | ---  |
 |------+------+ -----+------+------+------|          |------+------+------+------+------+------|
