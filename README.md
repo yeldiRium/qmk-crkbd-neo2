@@ -14,7 +14,7 @@ plugging the cable in the side you want to use.
 
 ## Layers
 
-This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the
+This is a [Neo 2.0](https://www.neo-layout.org/) layout adjusted for a 3x6+3 keyboard, to be used with the
 [Corne Keyboard](https://github.com/foostan/crkbd/). It is my personal
 optimization and I will not take requests. If you like it, feel free to use it,
 tweak it, whatever.
