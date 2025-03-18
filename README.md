@@ -19,6 +19,8 @@ This is a Neo 2.0 layout adjusted for a 3x6+3 keyboard, to be used with the
 optimization and I will not take requests. If you like it, feel free to use it,
 tweak it, whatever.
 
+I also have an [alternative layout for the ErgoDox EZ](https://github.com/yeldiRium/qmk-ergodox-ez-neo2/).
+
 - [Layer 1](#layer-1) Lowercase, upppercase and typographical characters
 - [Layer 2](#layer-2) Special characters for programming
 - [Layer 3](#layer-3) WASD-like movement keys and number block
