@@ -140,6 +140,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+  LAYOUT_split_3x6_3(
+    'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+    'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+    'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+                   'L', 'L', 'L',  'R', 'R', 'R'
+  );
+
 // Send – on Shift + ,
 const key_override_t em_dash_override = ko_make_basic(MOD_MASK_SHIFT, DE_COMM, RALT(KC_SLSH));
 // Send · on Shift + .
